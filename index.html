@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Facebook Post using Backbone JS</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Body</th>
+                    <th>By</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><input class="form-control subject-input"></td>
+                    <td><input class="form-control body-input"></td>
+                    <td><input class="form-control by-input"></td>
+                    <td><button class="btn btn-primary add-post">Post</button></td>
+                </tr>
+            </thead>
+            <tbody class="posts-list"></tbody>
+        </table>
+    </div>
+    <script type="text/template" class="posts-list-template">
+    <td><span class="subject"><%= subject %></span></td>
+    <td><span class="body"><%= body %></span></td>
+    <td><span class="by"><%= by %></span></td>
+    <td><button class="btn btn-success like-post"><%= like %></button>
+        <button class="btn btn-warning edit-post">Edit</button> 
+        <button class="btn btn-danger delete-post">Delete</button>
+        <button class="btn btn-success update-post" style="display:none">Update</button> 
+        <button class="btn btn-danger cancel" style="display:none">Cancel</button></td>
+
+    </script>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
